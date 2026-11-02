@@ -6,8 +6,8 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import { nitro } from "nitro/vite";
 
 export default defineConfig(({ command }) => {
-  const isVercel = !!process.env.VERCEL;
-  const preset = isVercel ? "vercel" : (process.env.NITRO_PRESET || "cloudflare-module");
+  const isVercel = !!process.env["VERCEL"];
+  const preset = isVercel ? "vercel" : (process.env["NITRO_PRESET"] || "cloudflare-module");
 
   return {
     plugins: [
